@@ -1,0 +1,128 @@
+.content{
+    margin: 0 auto;
+    width: 30px;
+}
+.square{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    left:0px;
+    background: #cecece;
+    animation: move 4s linear 0s infinite,tt 2s linear infinite;
+    /*PS: если вы используете несколько анимаций, */
+     /*то записывайте их в один параметр animation через запятую*/
+    -webkit-animation: move 4s linear 0s infinite,tt 2s linear infinite;
+    /*animation-name: move, tt;*/
+    /*-webkit-animation-name: move,tt;*/
+    /*animation-duration: 6s;*/
+    /*-webkit-animation-duration: 6s,2s;*/
+    /*animation-direction:alternate;*/
+    /*-webkit-animation-direction:alternate;*/
+    /*animation-iteration-count:8,8;*/
+    /*-webkit-animation-iteration-count:8,8;*/
+    /*animation-delay: -3s;*/
+    /*-webkit-animation-delay:-3s;*/
+}
+.red{
+    background: red;
+    transition: left 2s ease 2s;
+}
+.green{
+    background: green;
+    transition: left 2s ease-in 0s;
+}
+.grey{
+    background: grey;
+    transition: left 2s ease-out 0s;
+}
+.blue{
+    background: blue;
+    transition: left 2s ease-in-out 0s;
+}
+.yellow{
+    background: yellow;
+    transition: left 2s linear 0s;
+}
+/*.content:hover .square{*/
+    /*left: 400px;*/
+/*}*/
+input{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    transition: width 1s ease-in 0;
+}
+input:focus{
+    width: 300px;
+}
+
+@keyframes tt{
+    0%{
+        background: red;
+    }
+    100%{
+        background: green;
+    }
+}
+@-webkit-keyframes tt{
+    0%{
+        background: red;
+    }
+    100%{
+        background: green;
+    }
+}
+@keyframes move{
+    0%{
+        left:0px;
+    }
+    100%{
+       left:200px;
+    }
+}
+@-webkit-keyframes move{
+    0%{
+        left:0px;
+    }
+    100%{
+        left:200px;
+    }
+}
+
+.circle{
+    border-width: 30px;
+    border-radius: 50%;
+    border-color: #cecece inherit;
+    border-style: solid;
+    animation:rota 1s linear 0s infinite;
+    -webkit-animation:rota 1s linear 0s infinite;
+}
+.circle:hover{
+    animation-play-state:paused;
+    -webkit-animation-play-state:paused;
+}
+@keyframes rota{
+    0%{
+       transform:rotate(0deg);
+       -webkit-transform:rotate(0deg);
+        border-color: green transparent;
+    }
+    100%{
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        border-color: yellow transparent;
+    }
+}
+@-webkit-keyframes rota{
+    0%{
+        transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        border-color: green transparent;
+    }
+    100%{
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        border-color: yellow transparent;
+    }
+}
+
